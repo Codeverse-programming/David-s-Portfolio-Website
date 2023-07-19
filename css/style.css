@@ -65,20 +65,11 @@ input[type="checkbox"] {
 }
 
 .left-sidebar {
-    background: var(--black);
-    /* Black*/
-    box-shadow: var(--shadow);
-    float: left;
-    min-height: 100%;
+    width: 100%;
+    height: auto;
     position: fixed;
-    top: 0;
-    width: 6%;
-    padding-top: 2em;
-    line-height: 1.5;
-    z-index: 99;
-    text-align: center;
-    border-right: 5px dotted var(--gray-dark);
-    margin: 0 auto;
+    padding: 1.5em 0 1em;
+    background-color: var(--orange);
 }
 
 .left-sidebar .icon {
@@ -87,93 +78,51 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.left-nav i {
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    font-weight: bold;
-    display: block;
-    transition: 0.3s;
-}
-
 /* The side navigation menu */
-.sidenav {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 99;
-    /* Stay on top */
-    top: 0;
-    /* Stay at the top */
-    left: 6%;
-    background-color: var(--black);
-    /* border-left: dotted 10px var(--orange); */
-    /* Black*/
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 20px;
-    /* padding-left: 1em; */
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    text-align: left;
-    margin: 0 auto;
-    /* 0.5 second transition effect to slide in the sidenav */
-}
 
-.left-sidebar #show-burger:checked~.sidenav {
-    width: 40%;
+/* .left-sidebar #show-burger:checked~.sidenav {
+    width: 50%;
     overflow: hidden;
-}
+} */
 
 /* The navigation menu links */
+
+
 .sidenav .links a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.6875rem;
     letter-spacing: 2px;
     color: var(--white);
+    text-align: left;
     font-family: var(--text-font);
     font-weight: bold;
-    line-height: 3.5;
     text-transform: uppercase;
-    /* display: block; */
+    display: block;
     transition: 0.3s;
     position: relative;
 }
 
-.sidenav .links a:hover {
-    color: var(--orange);
+.sidenav .links ul {
+    width: 100%;
+    position: unset;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 15px;
 }
+
 
 .sidenav .links ul li {
     position: relative;
 }
 
-.sidenav .links {
-    margin: 1em 0 0;
-}
-
 /* When you mouse over the navigation links, change their color */
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 2rem;
-    color: var(--white);
-    cursor: pointer;
-    margin-left: 50px;
-}
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 0 0px 0 20px;
-}
+
 
 .logo {
     line-height: 2;
@@ -234,8 +183,7 @@ input[type="checkbox"] {
 /* hero section */
 .banner {
     background-color: var(--orange);
-    border-left: 5px solid var(--gainsboro);
-    padding: 1.5em 0 2em;
+    padding: 4.5em 1em 2em;
 }
 
 .banner-img {
@@ -297,7 +245,7 @@ input[type="checkbox"] {
 
 /* conference section */
 .conference {
-    padding: 5em 0 0;
+    padding: 5em 1.1em 0;
     background-color: var(--black);
 }
 
@@ -393,7 +341,7 @@ input[type="checkbox"] {
 
 /* conference section */
 .facts {
-    padding: 5em 0 0;
+    padding: 5em 1.1em 0;
     background-color: var(--black);
 }
 
@@ -489,7 +437,7 @@ input[type="checkbox"] {
 
 /* projects section */
 .projects {
-    padding: 5em 1em 2em;
+    padding: 5em 1.1em 2em;
     background-color: var(--black);
 }
 
@@ -607,7 +555,7 @@ input[type="checkbox"] {
 /* footer section */
 .footer {
     background-color: var(--orange);
-    padding: 2em 0;
+    padding: 2em 1.1em;
 }
 
 .footer h5 {
@@ -638,12 +586,50 @@ input[type="checkbox"] {
         padding: 8em 0 2em;
     }
 
-    .left-sidebar #show-burger:checked~.sidenav {
+    /* .left-sidebar #show-burger:checked~.sidenav {
         width: 10%;
-    }
+    } */
 }
 
-@media only screen and (min-width:790px) {
+@media only screen and (min-width:700px) {
+
+    .sidenav {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: var(--black);
+        position: fixed;
+        top: 0;
+        height: 100%;
+        border-right: 5px dotted var(--gray-dark);
+        overflow: auto;
+    }
+
+    .sidenav .links a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        color: var(--white);
+        text-align: left;
+        font-family: var(--text-font);
+        font-weight: bold;
+        line-height: 3.5;
+        text-transform: uppercase;
+        display: block;
+        transition: 0.3s;
+        position: relative;
+        margin-top: 1.5em;
+    }
+    .sidenav .links{
+        margin-top: 4em;
+    }
+    .sidenav .links ul {
+        width: 100%;
+        position: unset;
+        display: block;
+        align-items: center;
+        gap: 30px;
+    }
 
     .patients img {
         border-right: 1px solid var(--gainsboro);
@@ -671,23 +657,26 @@ input[type="checkbox"] {
     }
 
     #main {
-        transition: margin-left .5s;
-        padding: 0 0px 0 3em;
+        margin-left: 200px;
+        padding: 0px 0px;
+        height: 1000px;
     }
 
     .banner {
-        padding: 3.5em 1em 2em;
+        padding: 3.5em 0em 2em;
     }
 
     .conference,
     .facts,
     .projects,
     .footer {
-        padding: 4.5em 1em 2em;
+        padding: 4.5em 0em 2em;
     }
 
+    /* 
     .left-sidebar #show-burger:checked~.sidenav {
         width: 20%;
-    }
+    } */
+
 
 }
